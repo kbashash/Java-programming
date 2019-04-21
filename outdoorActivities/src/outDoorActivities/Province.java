@@ -5,16 +5,18 @@ import java.util.ArrayList;
 public class Province extends PopulatedArea{
 	private ArrayList<City> cities= new ArrayList<City>();
 	private City capitalOfProvince;
+	private String country;
 	
 	public Province() {
 		super();
 	}
 	
 	public Province(String name, Double longitude, Double latitude,
-			int population, ArrayList<City> cities, City capitalOfProvince) {
+			int population, ArrayList<City> cities, City capitalOfProvince,String country) {
 		super(name, longitude, latitude, population);
 		this.cities=cities;
 		this.capitalOfProvince=capitalOfProvince;
+		this.country=country;
 	}
 
 	public ArrayList<City> getCities() {
@@ -33,6 +35,17 @@ public class Province extends PopulatedArea{
 		this.capitalOfProvince = capitalOfProvince;
 	}
 	
+	public boolean equals(String name) {
+		if (this.getName().equals(name)) return true;
+		else return false;
+	}
+	public boolean equals(Province province) {
+		if (this.getName().equals(province.getName())) return true;
+		else return false;
+	}
+	public void addCity(City city) {
+		this.cities.add(city);
+	}
 	
 
 }

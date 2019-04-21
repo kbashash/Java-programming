@@ -42,7 +42,18 @@ public class Country extends PopulatedArea {
 	public void setCapitalOfCountry(City capitalOfCountry) {
 		this.capitalOfCountry = capitalOfCountry;
 	}
-
+	
+	public boolean equals(String name) {
+		if (this.getName().equals(name)) return true;
+		else return false;
+	}
+	public boolean equals(Country country) {
+		if (this.getName().equals(country.getName())) return true;
+		else return false;
+	}
+	public void addProvince(Province province) {
+		this.provinces.add(province);
+	}
 	
 	
 	
