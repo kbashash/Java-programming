@@ -45,6 +45,15 @@ public class Province extends PopulatedArea{
 	}
 	public void addCity(City city) {
 		this.cities.add(city);
+		super.setPopulation(super.getPopulation()+city.getPopulation());
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 	
 

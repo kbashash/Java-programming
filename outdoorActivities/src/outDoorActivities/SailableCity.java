@@ -8,8 +8,8 @@ public class SailableCity extends City implements Sailable {
 	}
 
 	public SailableCity(String name, Double longitude, Double latitude,
-			int population, int capitalStatus) {
-		super(name, longitude, latitude, population, capitalStatus);
+			int population, int capitalStatus, String province, String country) {
+		super(name, longitude, latitude, population, capitalStatus,province,country);
 	}
 
 	public boolean toSail(Weather weather){

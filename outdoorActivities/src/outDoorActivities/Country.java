@@ -11,8 +11,8 @@ public class Country extends PopulatedArea {
 		super();
 	}
 	
-	public Country(String name, Double longitude, Double latitude,
-			int population, String countryCode, ArrayList<Province> provinces, City capitalOfCountry ) {
+	public Country(String name, Double longitude, Double latitude,int population,
+			 String countryCode, ArrayList<Province> provinces, City capitalOfCountry ) {
 		super(name, longitude, latitude, population);
 		this.countryCode=countryCode;
 		this.provinces=provinces;
@@ -53,6 +53,7 @@ public class Country extends PopulatedArea {
 	}
 	public void addProvince(Province province) {
 		this.provinces.add(province);
+		super.setPopulation(super.getPopulation()+province.getPopulation());
 	}
 	
 	

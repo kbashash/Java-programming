@@ -7,8 +7,8 @@ public class SailableAndSkiiableCity extends City implements Sailable, Skiiable 
 	}
 
 	public SailableAndSkiiableCity(String name, Double longitude,
-			Double latitude, int population, int capitalStatus) {
-		super(name, longitude, latitude, population, capitalStatus);
+			Double latitude, int population, int capitalStatus,String province,String country) {
+		super(name, longitude, latitude, population, capitalStatus, province, country);
 	}
 	
 	public boolean toSail(Weather weather){

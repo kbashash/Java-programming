@@ -3,14 +3,34 @@ package outDoorActivities;
 public class City extends PopulatedArea {
 	
 	private int capitalStatus;
+	private String province;
+	private String country;
 	
+	public String getProvince() {
+		return province;
+	}
+
+	public void setProvince(String province) {
+		this.province = province;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
 	public City() {
 		super();
 	}
 	
-	public City(String name, Double longitude, Double latitude, int population, int capitalStatus) {
+	public City(String name, Double longitude, Double latitude, int population, int capitalStatus,String province, String country) {
 		super(name, longitude, latitude, population);
 		this.capitalStatus=capitalStatus;
+		this.province=province;
+		this.country=country;
 	}
 	
 	public boolean toFly(Weather weather){
